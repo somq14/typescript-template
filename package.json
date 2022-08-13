@@ -2,9 +2,12 @@
   "name": "typescript-template",
   "packageManager": "yarn@3.2.2",
   "scripts": {
-    "format": "prettier --ignore-path .gitignore --ignore-unknown --check \"**/*\""
+    "clean": "rm -r dist",
+    "format": "prettier --ignore-path .gitignore --ignore-unknown --check \"**/*\"",
+    "build": "tsc"
   },
   "devDependencies": {
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "typescript": "4.7.4"
   }
 }
