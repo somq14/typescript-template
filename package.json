@@ -4,9 +4,12 @@
   "scripts": {
     "clean": "rm -r dist",
     "format": "prettier --ignore-path .gitignore --ignore-unknown --check \"**/*\"",
+    "lint": "eslint --ignore-path .gitignore --max-warnings 0 \"**/*.{js,jsx,cjs,mjs,ts,tsx}\"",
     "build": "tsc"
   },
   "devDependencies": {
+    "@somq14/eslint-config": "somq14/eslint-config#v1.0.0",
+    "eslint": "8.21.0",
     "prettier": "2.7.1",
     "typescript": "4.7.4"
   }
