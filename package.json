@@ -1,4 +1,10 @@
 {
   "name": "typescript-template",
-  "packageManager": "yarn@3.2.2"
+  "packageManager": "yarn@3.2.2",
+  "scripts": {
+    "format": "prettier --ignore-path .gitignore --ignore-unknown --check \"**/*\""
+  },
+  "devDependencies": {
+    "prettier": "2.7.1"
+  }
 }
