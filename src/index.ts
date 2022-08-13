@@ -1,3 +1,3 @@
-console.info("hello");
-
-export {};
+export const add = (a: number, b: number): number => {
+  return a + b;
+};
