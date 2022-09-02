@@ -22,4 +22,33 @@
 
   // マイナーバージョンとパッチバージョンの PR を分けてそれぞれ作成する。
   separateMinorPatch: true,
+
+  // パッケージごとにルールを指定
+  packageRules: [
+    {
+      // リント関係のパッケージはまとめる
+      groupName: "lint dependencies",
+      matchPackageNames: ["prettier", "eslint", "@somq14/eslint-config"],
+    },
+    {
+      // テスト関係のパッケージはまとめる
+      groupName: "test dependencies",
+      matchPackageNames: ["jest", "@types/jest", "ts-jest"],
+    },
+    {
+      // CI で動作確認ができるパッケージは自動マージの対象にする
+      matchPackageNames: [
+        "yarn",
+        "prettier",
+        "eslint",
+        "@somq14/eslint-config",
+        "jest",
+        "@types/jest",
+        "ts-jest",
+        "typescript",
+      ],
+      matchUpdateTypes: ["patch"],
+      automerge: true,
+    },
+  ],
 }
