@@ -22,4 +22,18 @@
 
   // マイナーバージョンとパッチバージョンの PR を分けてそれぞれ作成する。
   separateMinorPatch: true,
+
+  // パッケージごとにルールを指定
+  packageRules: [
+    {
+      groupName: "lint tools",
+      matchPackageNames: ["prettier", "eslint", "@somq14/eslint-config"],
+      matchUpdateTypes: ["minor", "patch"],
+    },
+    {
+      groupName: "test tools",
+      matchPackageNames: ["jest", "@types/jest", "ts-jest"],
+      matchUpdateTypes: ["minor", "patch"],
+    },
+  ],
 }
