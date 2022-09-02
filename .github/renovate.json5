@@ -36,6 +36,7 @@
     {
       matchUpdateTypes: ["patch"],
       matchPackageNames: [
+        "yarn",
         "prettier",
         "eslint",
         "@somq14/eslint-config",
