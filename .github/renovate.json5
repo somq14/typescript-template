@@ -28,12 +28,23 @@
     {
       groupName: "lint tools",
       matchPackageNames: ["prettier", "eslint", "@somq14/eslint-config"],
-      matchUpdateTypes: ["minor", "patch"],
     },
     {
       groupName: "test tools",
       matchPackageNames: ["jest", "@types/jest", "ts-jest"],
-      matchUpdateTypes: ["minor", "patch"],
+    },
+    {
+      matchUpdateTypes: ["patch"],
+      matchPackageNames: [
+        "prettier",
+        "eslint",
+        "@somq14/eslint-config",
+        "jest",
+        "@types/jest",
+        "ts-jest",
+        "typescript",
+      ],
+      automerge: true,
     },
   ],
 }
