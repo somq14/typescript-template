@@ -1,6 +1,6 @@
 {
   "name": "typescript-template",
-  "packageManager": "yarn@3.2.3",
+  "packageManager": "yarn@3.2.4",
   "scripts": {
     "postinstall": "husky install",
     "clean": "rm -r dist",
